@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXORA – Shop Beyond Limits</title>
+<style>
+:root{--bg:#07090f;--s:#10141f;--s2:#171d2c;--t:#f3f6fb;--m:#8d99b0;--a:#1e6bff;--a2:#00c2ff;--b:#232b3e;--ok:#22c55e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#f4f6fb;--s:#fff;--s2:#eef1f8;--t:#0b1020;--m:#5b6679;--b:#dde3ef}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}a{color:var(--a2)}
+.sim{background:linear-gradient(90deg,var(--a),var(--a2));color:#fff;text-align:center;font-size:12px;padding:5px 10px}
+.sim b{background:#0003;padding:1px 6px;border-radius:4px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--b)}
+.nav{display:flex;align-items:center;gap:12px;padding:10px 16px;max-width:1280px;margin:auto;flex-wrap:wrap}
+.logo{font-weight:900;letter-spacing:.18em;font-size:22px;cursor:pointer;background:linear-gradient(90deg,var(--t),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent;animation:glow 4s infinite alternate}
+@keyframes glow{to{filter:drop-shadow(0 0 8px var(--a2))}}
+.search{flex:1;min-width:200px;display:flex}.search input{flex:1;background:var(--s);border:1px solid var(--b);border-radius:12px 0 0 12px;padding:10px 14px;outline:none}
+.search input:focus{border-color:var(--a)}.search button{border-radius:0 12px 12px 0}
+.btn{background:var(--a);border:0;color:#fff;padding:10px 16px;border-radius:12px;cursor:pointer;font-weight:600;transition:.2s}.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}
+.btn.g{background:var(--s2);color:var(--t);border:1px solid var(--b)}.btn.sm{padding:6px 10px;font-size:13px}.btn.d{background:#e5484d}
+.ic{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:8px 11px;cursor:pointer;position:relative}
+.ic i{position:absolute;top:-6px;right:-6px;background:var(--a);color:#fff;font-style:normal;font-size:11px;border-radius:9px;padding:0 6px}
+main{max-width:1280px;margin:auto;padding:16px}
+.hero{border-radius:24px;padding:56px 28px;background:radial-gradient(circle at 80% 20%,#00c2ff55,transparent 50%),radial-gradient(circle at 10% 90%,#1e6bff77,transparent 55%),#05070d;color:#fff;animation:up .8s both;overflow:hidden}
+.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;margin:8px 0;max-width:720px}.hero h1 span{color:var(--a2)}
+.hero p{max-width:520px;color:#b9c4d8}@keyframes up{from{opacity:0;transform:translateY(24px)}}
+h2{margin:30px 0 12px;font-size:22px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.cat{background:var(--s);border:1px solid var(--b);border-radius:14px;padding:16px;text-align:center;cursor:pointer;transition:.2s}.cat:hover{border-color:var(--a);transform:translateY(-3px)}.cat div{font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--s);border:1px solid var(--b);border-radius:16px;overflow:hidden;transition:.25s;animation:up .5s both;position:relative}.card:hover{transform:translateY(-5px);box-shadow:0 12px 30px #1e6bff33;border-color:var(--a)}
+.img{height:150px;display:grid;place-items:center;font-size:62px;cursor:pointer}.cb{padding:12px}.cb h4{margin:2px 0;font-size:14px;cursor:pointer}
+.pr{font-weight:800}.old{color:var(--m);text-decoration:line-through;font-size:13px;margin-left:6px}.off{color:var(--ok);font-size:13px;margin-left:6px}.m{color:var(--m);font-size:13px}
+.heart{position:absolute;top:8px;right:8px;background:#0007;border:0;border-radius:50%;width:32px;height:32px;cursor:pointer;color:#fff}
+.layout{display:grid;grid-template-columns:230px 1fr;gap:18px}@media(max-width:760px){.layout,.two{grid-template-columns:1fr!important}}
+.panel{background:var(--s);border:1px solid var(--b);border-radius:16px;padding:16px}.panel label{display:block;margin:10px 0 4px;font-size:13px;color:var(--m)}
+input,select,textarea{background:var(--s2);border:1px solid var(--b);border-radius:10px;padding:9px 11px;width:100%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.big{height:340px;border-radius:20px;display:grid;place-items:center;font-size:140px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:8px;border-bottom:1px solid var(--b)}.tbl{overflow-x:auto}
+.tl{display:flex;margin:12px 0}.tl div{flex:1;text-align:center;font-size:11px;color:var(--m);position:relative}.tl div:before{content:"";display:block;width:14px;height:14px;border-radius:50%;background:var(--b);margin:0 auto 4px;position:relative;z-index:1}
+.tl div:after{content:"";position:absolute;top:6px;left:-50%;width:100%;height:2px;background:var(--b)}.tl div:first-child:after{display:none}
+.tl .on{color:var(--t)}.tl .on:before,.tl .on:after{background:var(--a2)}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}.tag{background:var(--s2);border-radius:8px;padding:2px 8px;font-size:12px}.tag.ok{background:#22c55e22;color:var(--ok)}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(400px,100%);background:var(--s);border-left:1px solid var(--b);z-index:30;padding:16px;overflow:auto;animation:sl .25s}@keyframes sl{from{transform:translateX(100%)}}
+.ov{position:fixed;inset:0;background:#000a;z-index:20;display:grid;place-items:center;padding:16px}.mod{background:var(--s);border:1px solid var(--b);border-radius:20px;padding:22px;width:min(400px,100%);animation:up .3s}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--a);color:#fff;padding:10px 18px;border-radius:12px;z-index:40;animation:up .3s}
+footer{border-top:1px solid var(--b);margin-top:40px;padding:24px 16px;text-align:center;color:var(--m);font-size:13px}
+.sk{background:linear-gradient(90deg,var(--s) 25%,var(--s2) 50%,var(--s) 75%);background-size:200%;animation:sh 1.2s infinite;border-radius:16px;height:230px}@keyframes sh{to{background-position:-200%}}
+</style></head><body><div id="root"></div>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useEffect}=React,html=htm.bind(React.createElement);
+const ld=(k,d)=>{try{const v=localStorage.getItem('nx_'+k);return v?JSON.parse(v):d}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem('nx_'+k,JSON.stringify(v))}catch(e){}};
+const CATS=[['Electronics','📱'],['Fashion','👟'],['Beauty','💄'],['Home','🛋️'],['Sports','⚽'],['Books','📚'],['Accessories','⌚'],['Lifestyle','🎧']];
+const NM={Electronics:['Aero Pro Laptop 14"','Pulse X Smartphone','Vision 4K Monitor','Orbit Smart Speaker'],Fashion:['Stride Runner Sneakers','Nova Bomber Jacket','Urban Slim Jeans','Eclipse Hoodie'],Beauty:['Glow Vitamin C Serum','Velvet Matte Lipstick','Aqua Repair Cream','Silk Hair Mask'],Home:['Lumen Floor Lamp','Cloud Memory Pillow','Brew Master Coffee Maker','Zen Aroma Diffuser'],Sports:['Apex Yoga Mat','Flex Dumbbell Set','Velocity Football','TrailPro Backpack'],Books:['The Infinite Limit','Design Everything','Code & Craft','Mindful Markets'],Accessories:['Chrono Smartwatch','Link Leather Wallet','Shade Aviators','Volt Power Bank'],Lifestyle:['Beat Wireless Earbuds','Ember Travel Mug','Drift Instant Camera','Haven Scented Candle']};
+const BR=['Nexora','Aurum','Vertex','Lumo','Kairo'],RATE={USD:1,INR:83,EUR:.92,GBP:.79,JPY:150,AED:3.67,AUD:1.52,CAD:1.37},SYM={USD:'$',INR:'₹',EUR:'€',GBP:'£',JPY:'¥',AED:'AED ',AUD:'A$',CAD:'C$'};
+const CARD=['Credit / Debit card','Wallet','Stripe (international)'];
+const CT={'India':{c:'INR',l:'hi',tax:.18,tn:'GST',sh:0,d:'3–5',pay:['UPI','Credit / Debit card','Net banking','Wallet','Cash on delivery']},
+'United States':{c:'USD',l:'en',tax:.08,tn:'Sales tax',sh:12,d:'5–8',pay:CARD},'United Kingdom':{c:'GBP',l:'en',tax:.2,tn:'VAT',sh:12,d:'4–7',pay:CARD},
+'Germany':{c:'EUR',l:'de',tax:.19,tn:'MwSt',sh:12,d:'4–7',pay:CARD},'France':{c:'EUR',l:'fr',tax:.2,tn:'TVA',sh:12,d:'4–7',pay:CARD},'Spain':{c:'EUR',l:'es',tax:.21,tn:'IVA',sh:12,d:'5–8',pay:CARD},
+'Japan':{c:'JPY',l:'en',tax:.1,tn:'Consumption tax',sh:15,d:'6–9',pay:CARD},'UAE':{c:'AED',l:'ar',tax:.05,tn:'VAT',sh:14,d:'4–6',pay:[...CARD,'Cash on delivery']},
+'Australia':{c:'AUD',l:'en',tax:.1,tn:'GST',sh:16,d:'7–10',pay:CARD},'Canada':{c:'CAD',l:'en',tax:.13,tn:'HST',sh:13,d:'5–8',pay:CARD},
+'Antarctica':{c:'USD',l:'en',tax:0,tn:'Tax',sh:0,d:'—',pay:[],no:1}};
+const LN={en:'English',es:'Español',fr:'Français',de:'Deutsch',hi:'हिन्दी',ar:'العربية'};
+const I18N={en:{search:'Search products, brands, categories…',go:'Search',login:'Log in',explore:'Explore catalogue',cats:'Featured categories',trend:'Trending now',flash:'Flash sale',add:'Add to cart',sold:'Sold out',cart:'Cart',checkout:'Checkout',place:'Place order'},
+es:{search:'Buscar productos, marcas, categorías…',go:'Buscar',login:'Iniciar sesión',explore:'Explorar catálogo',cats:'Categorías destacadas',trend:'Tendencias',flash:'Venta flash',add:'Añadir al carrito',sold:'Agotado',cart:'Carrito',checkout:'Pagar',place:'Realizar pedido'},
+fr:{search:'Rechercher produits, marques, catégories…',go:'Rechercher',login:'Connexion',explore:'Découvrir le catalogue',cats:'Catégories à la une',trend:'Tendances',flash:'Vente flash',add:'Ajouter au panier',sold:'Épuisé',cart:'Panier',checkout:'Paiement',place:'Passer commande'},
+de:{search:'Produkte, Marken, Kategorien suchen…',go:'Suchen',login:'Anmelden',explore:'Katalog entdecken',cats:'Top-Kategorien',trend:'Im Trend',flash:'Blitzangebot',add:'In den Warenkorb',sold:'Ausverkauft',cart:'Warenkorb',checkout:'Zur Kasse',place:'Bestellen'},
+hi:{search:'उत्पाद, ब्रांड, श्रेणियाँ खोजें…',go:'खोजें',login:'लॉग इन',explore:'कैटलॉग देखें',cats:'प्रमुख श्रेणियाँ',trend:'ट्रेंडिंग',flash:'फ्लैश सेल',add:'कार्ट में जोड़ें',sold:'स्टॉक खत्म',cart:'कार्ट',checkout:'चेकआउट',place:'ऑर्डर करें'},
+ar:{search:'ابحث عن المنتجات والعلامات…',go:'بحث',login:'تسجيل الدخول',explore:'تصفح الكتالوج',cats:'الفئات المميزة',trend:'الأكثر رواجاً',flash:'تخفيضات سريعة',add:'أضف إلى السلة',sold:'نفد',cart:'السلة',checkout:'الدفع',place:'تأكيد الطلب'}};
+const P0=[];let k=0;CATS.forEach(([c,e])=>NM[c].forEach(n=>{k++;P0.push({id:k,name:n,cat:c,emoji:e,brand:BR[k%5],price:12+((k*37)%25)*9+(c==='Electronics'?160:0),off:[0,10,15,20,25][k%5],rating:+(3.8+((k*7)%12)/10).toFixed(1),rc:40+k*17,stock:3+((k*13)%40)})}));
+const fin=p=>Math.round(p.price*(1-p.off/100)*100)/100,STG=['Placed','Packed','Shipped','Out for delivery','Delivered'];
+const SEED=[{id:'NX-10021',date:'2026-10-02',items:[{id:1,q:1}],stage:4,ret:null},{id:'NX-10034',date:'2026-10-14',items:[{id:9,q:2},{id:15,q:1}],stage:2,ret:null}];
+const REV=[['Aisha K.',5,'Exceeded expectations. Fast delivery.'],['Marco R.',4,'Great quality for the price.'],['Priya S.',5,'Packaging was premium. Would buy again.']];
+
+function App(){
+const [view,setView]=useState({n:'home'}),[prods,setProds]=useState(()=>ld('prods',P0)),[cart,setCart]=useState(()=>ld('cart',{})),[wish,setWish]=useState(()=>ld('wish',[])),[user,setUser]=useState(()=>ld('user',null)),
+[theme,setTheme]=useState(()=>ld('theme',matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')),[cur,setCur]=useState(()=>ld('cur','USD')),
+[orders,setOrders]=useState(()=>ld('orders',SEED)),[tix,setTix]=useState(()=>ld('tix',[])),[rv,setRv]=useState(()=>ld('rv',[])),
+[q,setQ]=useState(''),[modal,setModal]=useState(null),[toast,setToast]=useState(''),[cp,setCp]=useState(''),[coupon,setCoupon]=useState(null),
+[f,setF]=useState({cat:'All',max:1000,rate:0,stock:false,sort:'rel'}),[tab,setTab]=useState('orders'),[pay,setPay]=useState('UPI'),[ctry,setCtry]=useState(()=>ld('ctry','India')),[lang,setLang]=useState(()=>ld('lang','en')),
+[load,setLoad]=useState(true),[otp,setOtp]=useState(false),[left,setLeft]=useState(10800);
+useEffect(()=>{document.documentElement.dataset.theme=theme;document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';[['ctry',ctry],['lang',lang],['theme',theme],['cur',cur],['prods',prods],['cart',cart],['wish',wish],['user',user],['orders',orders],['tix',tix],['rv',rv]].forEach(a=>sv(...a))});
+useEffect(()=>{const t=setTimeout(()=>setLoad(false),700),i=setInterval(()=>setLeft(l=>l>0?l-1:10800),1000);return()=>{clearTimeout(t);clearInterval(i)}},[]);
+const pr=id=>prods.find(p=>p.id===id)||{id,name:'Removed item',emoji:'❔',price:0,off:0,stock:0,cat:''};
+const fm=u=>SYM[cur]+(u*RATE[cur]).toLocaleString(undefined,{maximumFractionDigits:['INR','JPY'].includes(cur)?0:2});
+const C=CT[ctry]||CT.India,T=k=>(I18N[lang]||{})[k]||I18N.en[k]||k;
+const setRegion=n=>{const r=CT[n];setCtry(n);setCur(r.c);setLang(r.l);setPay(r.pay[0]||'');tt('Region set to '+n)};
+const tt=m=>{setToast(m);setTimeout(()=>setToast(''),2200)},go=(n,x)=>{setView({n,...x});setModal(null);scrollTo(0,0)};
+const add=(id,n=1)=>{setCart(c=>({...c,[id]:Math.min((c[id]||0)+n,pr(id).stock)}));tt('Added to cart')};
+const tw=id=>{setWish(w=>w.includes(id)?w.filter(x=>x!==id):[...w,id])};
+const ids=Object.keys(cart).map(Number).filter(i=>cart[i]>0&&prods.some(p=>p.id===i));
+const sub=ids.reduce((s,i)=>s+fin(pr(i))*cart[i],0),disc=coupon==='NEXORA10'?sub*.1:0,ship=!ids.length||sub>=100||coupon==='FREESHIP'?0:8,intl=!ids.length?0:C.sh,tax=(sub-disc)*C.tax,total=sub-disc+ship+intl+tax;
+const ot=o=>o.items.reduce((s,i)=>s+fin(pr(i.id))*i.q,0);
+const stars=r=>'★'.repeat(Math.round(r))+'☆'.repeat(5-Math.round(r));
+const bg=p=>({background:`linear-gradient(135deg,hsl(${200+p.id*6} 70% 30%),hsl(${220+p.id*5} 80% 12%))`});
+
+const Card=p=>html`<div class=card key=${p.id}><button class=heart onClick=${()=>tw(p.id)}>${wish.includes(p.id)?'♥':'♡'}</button>
+<div class=img style=${bg(p)} onClick=${()=>{setRv(r=>[p.id,...r.filter(x=>x!==p.id)].slice(0,6));go('pd',{id:p.id})}}>${p.emoji}</div>
+<div class=cb><div class=m>${p.brand} · ${p.cat}</div><h4 onClick=${()=>{setRv(r=>[p.id,...r.filter(x=>x!==p.id)].slice(0,6));go('pd',{id:p.id})}}>${p.name}</h4>
+<div class=m style=${{color:'#f5b301'}}>${stars(p.rating)} <span class=m>(${p.rc})</span></div>
+<div><span class=pr>${fm(fin(p))}</span>${p.off?html`<span class=old>${fm(p.price)}</span><span class=off>${p.off}% off</span>`:''}</div>
+<div class=row style=${{marginTop:8}}><button class="btn sm" disabled=${!p.stock} onClick=${()=>add(p.id)}>${p.stock?T('add'):T('sold')}</button></div></div></div>`;
+const Grid=l=>load?html`<div class=grid>${[1,2,3,4].map(i=>html`<div class=sk key=${i}/>`)}</div>`:html`<div class=grid>${l.map(Card)}</div>`;
+
+const home=()=>html`<div class=hero><span class=tag>NEW SEASON · GLOBAL SHIPPING</span><h1>Shop <span>Beyond</span> Limits.</h1><p>Millions of premium products from trusted brands, delivered worldwide. Prototype demo with ${prods.length} sample products.</p><div class=row style=${{marginTop:18}}><button class=btn onClick=${()=>go('shop')}>${T('explore')}</button><button class="btn g" onClick=${()=>{setCoupon('NEXORA10');tt('Coupon NEXORA10 applied')}}>Claim 10% off</button></div></div>
+<h2>${T('cats')}</h2><div class=cats>${CATS.map(([c,e])=>html`<div class=cat key=${c} onClick=${()=>{setF({...f,cat:c});go('shop')}}><div>${e}</div>${c}</div>`)}</div>
+<h2>⚡ ${T('flash')} <span class=tag>ends in ${[left/3600|0,(left%3600)/60|0,left%60].map(x=>String(x).padStart(2,'0')).join(':')}</span></h2>${Grid(prods.filter(p=>p.off>=20).slice(0,4))}
+<h2>${T('trend')}</h2>${Grid([...prods].sort((a,b)=>b.rc-a.rc).slice(0,8))}
+${rv.length?html`<h2>Recently viewed</h2>${Grid(rv.map(pr).filter(p=>p.stock!==undefined&&p.name!=='Removed item'))}`:''}
+<h2>Recommended for you <span class=tag>simulated AI</span></h2>${Grid([...prods].sort((a,b)=>b.rating-a.rating).slice(0,4))}
+<h2>Customer love</h2><div class=grid>${REV.map(r=>html`<div class=panel key=${r[0]}><div style=${{color:'#f5b301'}}>${stars(r[1])}</div>“${r[2]}”<div class=m>— ${r[0]}</div></div>`)}</div>
+<div class=panel style=${{marginTop:30,textAlign:'center'}}><h3>Join the NEXORA newsletter</h3><form class=row style=${{justifyContent:'center'}} onSubmit=${e=>{e.preventDefault();tt('Subscribed (simulated)');e.target.reset()}}><input required type=email placeholder="you@email.com" style=${{maxWidth:300}}/><button class=btn>Subscribe</button></form></div>`;
+
+const shop=()=>{let l=prods.filter(p=>(f.cat==='All'||p.cat===f.cat)&&fin(p)<=f.max&&p.rating>=f.rate&&(!f.stock||p.stock>0)&&(p.name+p.brand+p.cat).toLowerCase().includes(q.toLowerCase()));
+if(f.sort==='lo')l=[...l].sort((a,b)=>fin(a)-fin(b));if(f.sort==='hi')l=[...l].sort((a,b)=>fin(b)-fin(a));if(f.sort==='rt')l=[...l].sort((a,b)=>b.rating-a.rating);
+return html`<div class=layout><div class=panel style=${{alignSelf:'start'}}><b>Filters</b><label>Category</label><select value=${f.cat} onChange=${e=>setF({...f,cat:e.target.value})}><option>All</option>${CATS.map(c=>html`<option key=${c[0]}>${c[0]}</option>`)}</select>
+<label>Max price: ${fm(f.max)}</label><input type=range min=10 max=1000 value=${f.max} onChange=${e=>setF({...f,max:+e.target.value})}/>
+<label>Min rating</label><select value=${f.rate} onChange=${e=>setF({...f,rate:+e.target.value})}>${[0,3,4,4.5].map(r=>html`<option key=${r} value=${r}>${r?r+'★ & up':'Any'}</option>`)}</select>
+<label>Sort</label><select value=${f.sort} onChange=${e=>setF({...f,sort:e.target.value})}><option value=rel>Relevance</option><option value=lo>Price: low to high</option><option value=hi>Price: high to low</option><option value=rt>Top rated</option></select>
+<label><input type=checkbox style=${{width:'auto'}} checked=${f.stock} onChange=${e=>setF({...f,stock:e.target.checked})}/> In stock only</label></div>
+<div><div class=m>${l.length} results${q?` for “${q}”`:''}</div>${l.length?Grid(l):html`<div class=panel>No products match your filters.</div>`}</div></div>`};
+
+const pd=()=>{const p=pr(view.id),rel=prods.filter(x=>x.cat===p.cat&&x.id!==p.id);return html`<div class=two><div class=big style=${bg(p)}>${p.emoji}</div><div><span class=tag>${p.brand}</span><h1 style=${{margin:'8px 0'}}>${p.name}</h1><div style=${{color:'#f5b301'}}>${stars(p.rating)} <span class=m>${p.rating} · ${p.rc} reviews</span></div>
+<div style=${{fontSize:30,fontWeight:800,margin:'8px 0'}}>${fm(fin(p))}${p.off?html`<span class=old>${fm(p.price)}</span><span class=off>${p.off}% off</span>`:''}</div>
+<div class=${'tag '+(p.stock>0?'ok':'')}>${p.stock>0?`In stock (${p.stock} left)`:'Out of stock'}</div><p class=m>${C.no?'🚫 Delivery unavailable to '+ctry:'🚚 Delivery to '+ctry+': '+C.d+' business days · Free shipping over '+fm(100)}</p>
+<p>Engineered for people who want more. Premium materials, 2-year warranty and 30-day easy returns.</p><div class=row><button class=btn disabled=${!p.stock} onClick=${()=>add(p.id)}>${T('add')}</button><button class="btn g" onClick=${()=>{add(p.id);setModal('cart')}}>Buy now</button><button class="btn g" onClick=${()=>tw(p.id)}>${wish.includes(p.id)?'♥ Wishlisted':'♡ Wishlist'}</button></div>
+<h3>Specifications</h3><table><tbody>${[['Brand',p.brand],['Category',p.cat],['Warranty','2 years'],['SKU','NX-'+(1000+p.id)],['Ships from','Global hub']].map(r=>html`<tr key=${r[0]}><td class=m>${r[0]}</td><td>${r[1]}</td></tr>`)}</tbody></table></div></div>
+<h2>Customer reviews</h2><div class=grid>${REV.map(r=>html`<div class=panel key=${r[0]}><div style=${{color:'#f5b301'}}>${stars(r[1])}</div>${r[2]}<div class=m>${r[0]}</div></div>`)}</div>
+<h2>FAQs</h2><div class=panel><b>Is international shipping available?</b><div class=m>Yes, to 100+ countries (simulated rates).</div><p><b>Can I return it?</b><div class=m>Within 30 days from the Orders page.</div></p></div>
+<h2>Related products</h2>${Grid(rel)}`};
+
+const place=()=>{if(!user)return setModal('auth');const o={id:'NX-'+(10000+Math.floor(Math.random()*89999)),date:new Date().toISOString().slice(0,10),items:ids.map(i=>({id:i,q:cart[i]})),stage:0,ret:null};
+setProds(ps=>ps.map(p=>cart[p.id]?{...p,stock:Math.max(0,p.stock-cart[p.id])}:p));setOrders([o,...orders]);setCart({});setCoupon(null);tt('Order '+o.id+' placed (simulated)');setTab('orders');go('acct')};
+const checkout=()=>html`<div class=two><div><div class=panel><h3>Shipping address</h3><label>Full name</label><input defaultValue=${user?user.name:''}/><label>Address</label><input placeholder="Street, city, postal code"/><label>Country · ${C.no?'🚫 delivery unavailable':'delivery '+C.d+' days'} · ${C.tn} ${Math.round(C.tax*100)}%</label><select value=${ctry} onChange=${e=>setRegion(e.target.value)}>${Object.keys(CT).map(c=>html`<option key=${c}>${c}</option>`)}</select></div>
+<div class=panel style=${{marginTop:14}}><h3>Payment <span class=tag>simulated · no real charge</span></h3>${C.pay.map(m=>html`<label key=${m} style=${{color:'var(--t)'}}><input type=radio style=${{width:'auto'}} checked=${pay===m} onChange=${()=>setPay(m)}/> ${m}</label>`)}<p class=m>In production, hosted Razorpay/Stripe checkout is used. Raw card details are never stored.</p></div></div>
+<div class=panel style=${{alignSelf:'start'}}><h3>Order summary</h3>${ids.map(i=>html`<div class=row key=${i} style=${{justifyContent:'space-between'}}><span>${pr(i).name} × ${cart[i]}</span><span>${fm(fin(pr(i))*cart[i])}</span></div>`)}<hr/>
+<div class=row style=${{justifyContent:'space-between'}}><span>Subtotal</span>${fm(sub)}</div>${disc?html`<div class=row style=${{justifyContent:'space-between'}}><span>Coupon</span>-${fm(disc)}</div>`:''}<div class=row style=${{justifyContent:'space-between'}}><span>Shipping</span>${ship+intl?fm(ship+intl):'Free'}</div><div class=row style=${{justifyContent:'space-between'}}><span>${C.tn} (${Math.round(C.tax*100)}%)</span>${fm(tax)}</div>
+<div class=row style=${{justifyContent:'space-between',fontWeight:800,fontSize:18}}><span>Total</span>${fm(total)}</div><button class=btn style=${{width:'100%',marginTop:12}} disabled=${!ids.length||C.no} onClick=${place}>${C.no?'Delivery unavailable':T('place')+' ('+pay+')'}</button></div></div>`;
+
+const acct=()=>{if(!user)return html`<div class=panel>Please log in. <button class=btn onClick=${()=>setModal('auth')}>Log in</button></div>`;
+return html`<h2 style=${{marginTop:0}}>Hello, ${user.name}</h2><div class=tabs>${[['orders','Orders & tracking'],['wish','Wishlist'],['support','Support'],['profile','Profile']].map(t=>html`<button key=${t[0]} class="btn sm ${tab===t[0]?'':'g'}" onClick=${()=>setTab(t[0])}>${t[1]}</button>`)}</div>
+${tab==='orders'?(orders.length?orders.map(o=>html`<div class=panel key=${o.id} style=${{marginBottom:12}}><div class=row style=${{justifyContent:'space-between'}}><b>${o.id}</b><span class=m>${o.date} · ${fm(ot(o))}</span></div><div class=m>${o.items.map(i=>pr(i.id).name+' ×'+i.q).join(', ')}</div>
+<div class=tl>${STG.map((s,i)=>html`<div key=${s} class=${i<=o.stage?'on':''}>${s}</div>`)}</div><div class=row><span class=tag>🔔 Notification (simulated): ${STG[o.stage]}</span>
+<button class="btn g sm" onClick=${()=>{const w=window.open('','_blank');if(w){w.document.write('<h2>NEXORA Invoice '+o.id+'</h2><p>Total: '+fm(ot(o))+'</p><p>Demo invoice</p>');w.document.close()}else tt('Allow popups for invoice')}}>Invoice</button>
+${o.stage<2&&!o.ret?html`<button class="btn g sm" onClick=${()=>{setOrders(orders.map(x=>x===o?{...o,ret:'Cancelled'}:x));tt('Cancellation requested')}}>Cancel</button>`:''}
+${o.stage===4&&!o.ret?html`<button class="btn g sm" onClick=${()=>{setOrders(orders.map(x=>x===o?{...o,ret:'Return requested'}:x));tt('Return requested')}}>Return / refund</button>`:''}${o.ret?html`<span class=tag>${o.ret}</span>`:''}</div></div>`):html`<div class=panel>No orders yet.</div>`):''}
+${tab==='wish'?(wish.length?Grid(wish.map(pr)):html`<div class=panel>Your wishlist is empty.</div>`):''}
+${tab==='support'?html`<div class=panel><form onSubmit=${e=>{e.preventDefault();setTix([{id:'T-'+(100+tix.length),s:e.target.s.value,st:'Open'},...tix]);e.target.reset();tt('Ticket created')}}><input name=s required placeholder="Describe your issue"/><button class=btn style=${{marginTop:8}}>Create ticket</button></form>${tix.map(t=>html`<p key=${t.id}><b>${t.id}</b> ${t.s} <span class=tag>${t.st}</span></p>`)}</div>`:''}
+${tab==='profile'?html`<div class=panel><label>Email</label><input readOnly value=${user.email}/><label>Saved address</label><input placeholder="Add address"/><p class=m>Security: password reset & 2FA via Supabase Auth in production.</p></div>`:''}`};
+
+const admin=()=>{if(!user||!user.admin)return html`<div class=panel>Admin only. Log in with <b>admin@nexora.demo</b> (any password).</div>`;
+const rev=orders.reduce((s,o)=>s+ot(o),0);return html`<h2 style=${{marginTop:0}}>Admin dashboard <span class=tag>demo data</span></h2><div class=grid>${[['Revenue',fm(rev)],['Orders',orders.length],['Products',prods.length],['Low stock',prods.filter(p=>p.stock<8).length]].map(s=>html`<div class=panel key=${s[0]}><div class=m>${s[0]}</div><div style=${{fontSize:26,fontWeight:800}}>${s[1]}</div></div>`)}</div>
+<h2>Orders</h2><div class="panel tbl"><table><tbody>${orders.map(o=>html`<tr key=${o.id}><td>${o.id}</td><td>${fm(ot(o))}</td><td>${STG[o.stage]}${o.ret?' · '+o.ret:''}</td><td class=row>${o.stage<4?html`<button class="btn sm" onClick=${()=>setOrders(orders.map(x=>x===o?{...o,stage:o.stage+1}:x))}>Advance</button>`:''}${o.ret==='Return requested'?html`<button class="btn sm g" onClick=${()=>setOrders(orders.map(x=>x===o?{...o,ret:'Refunded'}:x))}>Approve refund</button>`:''}</td></tr>`)}</tbody></table></div>
+<h2>Inventory <button class="btn sm" onClick=${()=>setProds([...prods,{...P0[0],id:Math.max(...prods.map(p=>p.id))+1,name:'New Product',stock:10}])}>+ Add product</button></h2><div class="panel tbl"><table><tbody>${prods.map(p=>html`<tr key=${p.id}><td>${p.emoji} ${p.name}</td><td>${fm(fin(p))}</td><td class=row><button class="btn g sm" onClick=${()=>setProds(prods.map(x=>x.id===p.id?{...x,stock:Math.max(0,x.stock-1)}:x))}>−</button>${p.stock}<button class="btn g sm" onClick=${()=>setProds(prods.map(x=>x.id===p.id?{...x,stock:x.stock+1}:x))}>+</button></td><td><button class="btn d sm" onClick=${()=>setProds(prods.filter(x=>x.id!==p.id))}>Delete</button></td></tr>`)}</tbody></table></div>`};
+
+const auth=()=>html`<div class=ov onClick=${()=>setModal(null)}><div class=mod onClick=${e=>e.stopPropagation()}><h3>Welcome to NEXORA <span class=tag>simulated auth</span></h3>
+<form onSubmit=${e=>{e.preventDefault();const em=e.target.em.value;if(otp&&e.target.o&&e.target.o.value!=='123456')return tt('Wrong OTP (use 123456)');setUser({name:em.split('@')[0]||'Shopper',email:em,admin:em==='admin@nexora.demo'});setModal(null);tt('Logged in')}}>
+<input name=em required placeholder=${otp?'+91 98765 43210':'Email'} type=${otp?'tel':'email'}/>${otp?html`<input name=o required placeholder="OTP: 123456" style=${{marginTop:8}}/>`:html`<input type=password required placeholder="Password" style=${{marginTop:8}}/>`}
+<button class=btn style=${{width:'100%',marginTop:10}}>${otp?'Verify OTP':'Log in / Register'}</button></form>
+<div class=row style=${{marginTop:10}}><button class="btn g sm" onClick=${()=>setOtp(!otp)}>${otp?'Use email':'Phone OTP'}</button><button class="btn g sm" onClick=${()=>{setUser({name:'Google User',email:'user@gmail.com'});setModal(null)}}>Google</button><button class="btn g sm" onClick=${()=>tt('Reset link sent (simulated)')}>Forgot password</button></div></div></div>`;
+
+const cartUI=()=>html`<div class=ov style=${{placeItems:'stretch end',padding:0}} onClick=${()=>setModal(null)}><div class=drawer onClick=${e=>e.stopPropagation()}><div class=row style=${{justifyContent:'space-between'}}><h3>${T('cart')} (${ids.length})</h3><button class="btn g sm" onClick=${()=>setModal(null)}>✕</button></div>
+${ids.map(i=>html`<div class=panel key=${i} style=${{marginBottom:8}}><div>${pr(i).emoji} ${pr(i).name}</div><div class=row style=${{justifyContent:'space-between'}}><span class=pr>${fm(fin(pr(i))*cart[i])}</span><span class=row><button class="btn g sm" onClick=${()=>setCart({...cart,[i]:cart[i]-1})}>−</button>${cart[i]}<button class="btn g sm" onClick=${()=>add(i)}>+</button><button class="btn d sm" onClick=${()=>setCart({...cart,[i]:0})}>✕</button></span></div></div>`)}
+${ids.length?html`<div class=row><input placeholder="Coupon: NEXORA10 / FREESHIP" value=${cp} onChange=${e=>setCp(e.target.value.toUpperCase())} style=${{flex:1}}/><button class="btn g sm" onClick=${()=>{['NEXORA10','FREESHIP'].includes(cp)?(setCoupon(cp),tt('Coupon applied')):tt('Invalid coupon')}}>Apply</button></div>
+<p>Subtotal ${fm(sub)}${disc?` · Coupon −${fm(disc)}`:''}<br/>Shipping ${ship?fm(ship):'Free'} · Total <b>${fm(total)}</b></p><button class=btn style=${{width:'100%'}} onClick=${()=>go('checkout')}>${T('checkout')}</button>`:html`<p class=m>Your cart is empty.</p>`}</div></div>`;
+
+return html`<div><div class=sim><b>PROTOTYPE</b> Payments, OTP, tracking, notifications & AI picks are simulated. No real transactions occur.</div>
+<header><div class=nav><span class=logo onClick=${()=>go('home')}>NEXORA</span>
+<form class=search onSubmit=${e=>{e.preventDefault();go('shop')}}><input list=sg placeholder=${T('search')} value=${q} onChange=${e=>setQ(e.target.value)}/><datalist id=sg>${prods.slice(0,40).map(p=>html`<option key=${p.id} value=${p.name}/>`)}</datalist><button class=btn>${T('go')}</button></form>
+<select style=${{width:130}} title=Country value=${ctry} onChange=${e=>setRegion(e.target.value)}>${Object.keys(CT).map(c=>html`<option key=${c}>${c}</option>`)}</select><select style=${{width:105}} title=Language value=${lang} onChange=${e=>setLang(e.target.value)}>${Object.keys(LN).map(c=>html`<option key=${c} value=${c}>${LN[c]}</option>`)}</select><select style=${{width:80}} title=Currency value=${cur} onChange=${e=>setCur(e.target.value)}>${Object.keys(RATE).map(c=>html`<option key=${c}>${c}</option>`)}</select>
+<button class=ic onClick=${()=>setTheme(theme==='dark'?'light':'dark')}>${theme==='dark'?'☀️':'🌙'}</button>
+<button class=ic onClick=${()=>{setTab('wish');go('acct')}}>♡${wish.length?html`<i>${wish.length}</i>`:''}</button>
+<button class=ic onClick=${()=>setModal('cart')}>🛒${ids.length?html`<i>${ids.reduce((s,i)=>s+cart[i],0)}</i>`:''}</button>
+${user?html`<button class="btn g sm" onClick=${()=>{setTab('orders');go('acct')}}>👤 ${user.name}</button>${user.admin?html`<button class="btn sm" onClick=${()=>go('admin')}>Admin</button>`:''}<button class="btn g sm" onClick=${()=>setUser(null)}>Log out</button>`:html`<button class=btn onClick=${()=>setModal('auth')}>${T('login')}</button>`}</div></header>
+<main>${{home,shop,pd,checkout,acct,admin}[view.n]()}</main>
+<footer><b>NEXORA</b> — Shop Beyond Limits<br/>${Object.keys(CT).length-1} delivery regions · ${Object.keys(I18N).length} languages · ${Object.keys(RATE).length} currencies · Demo content only</footer>
+${modal==='auth'?auth():''}${modal==='cart'?cartUI():''}${toast?html`<div class=toast>${toast}</div>`:''}</div>`}
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+</script></body></html>
